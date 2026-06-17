@@ -1,4 +1,4 @@
-let score=JSON.parse(localStorage.getItem('score'))||{
+let score={
     wins:0,
     losses:0,
     ties:0
@@ -40,7 +40,7 @@ function playGame(playerMove){
         score.losses++;
     }
 
-        localStorage.setItem('score',JSON.stringify(score));
+        
         updateScore();
         document.querySelector('.para1').innerHTML=result;
         document.querySelector('.para2').innerHTML=`
